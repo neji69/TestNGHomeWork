@@ -18,7 +18,7 @@ public class SimpleTest {
     private List<String> prof = Arrays.asList("Программист", "Системный администратор", "Вэб Дизайнер", "Проджект менеджер");
 
 
-
+    // ТЕСТ С ИСПОЛЬЗОВАНИЕМ ASSERTJ
     @Test
     public void simpleTest1() {
         Dog fido = new Dog("Fido", 5.25f);
@@ -32,13 +32,13 @@ public class SimpleTest {
 
     }
 
-
+// ПРОСТОЙ ТЕСТ TESTNG
     @Test
     public void simpleTest2() {
         LOG.info("Это простой тест и он выполнен успешно");
     }
 
-
+    // ПАРАМЕТРИЗОВАННЫЙ ТЕСТ TESTNG
     @DataProvider(name = "Имена")
     private Object[][] dataProvider() {
         return new Object[][]{
