@@ -32,7 +32,7 @@ public class SimpleTest {
         assertThat(fido)
                 .as("Проверка")
                 .isEqualToComparingFieldByField(fidosClone);
-        LOG.info("тест прошел успешно");
+        LOG.info("Тест ассертджи прошел успешно");
 
     }
 
@@ -42,8 +42,8 @@ public class SimpleTest {
         Dog sudo = new Dog("Sudo", 5.25f);
         Dog sudosClone = new Dog("Sudo", 5.25f);
 
-        assertThat(sudo,equalTo(sudosClone));
-        LOG.info("тест прошел успешно");
+        assertThat(sudo,not(equalTo(sudosClone)));
+        LOG.info("Тест хамкрест пройден.");
 
     }
 
