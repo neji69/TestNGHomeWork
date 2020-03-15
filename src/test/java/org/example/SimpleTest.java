@@ -11,6 +11,10 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+
 
 public class SimpleTest {
 
@@ -31,6 +35,19 @@ public class SimpleTest {
         LOG.info("тест прошел успешно");
 
     }
+
+    // ТЕСТ С ИСПОЛЬЗОВАНИЕМ HAMCREST
+    @Test
+    public void simpleTest1ham() {
+        Dog sudo = new Dog("Sudo", 5.25f);
+        Dog sudosClone = new Dog("Sudo", 5.25f);
+
+        assertThat(sudo,equalTo(sudosClone));
+        LOG.info("тест прошел успешно");
+
+    }
+
+
 
 // ПРОСТОЙ ТЕСТ TESTNG
     @Test
